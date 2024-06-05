@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+    <style>
+        h2{
+           color: #110957;
+        }
+    </style>
+</head>
+<body>
+    <h1>País onde Você nasceu.</h1>
+    <h2>Qual país você nasceu?</h2><input type="text" name="p" id="p">
+    <input type="button" value="responder"onclick="confirmar()">
+    <div id = "res">
+
+    </div>
+    <script>
+        function confirmar(){
+            var país = window.document.getElementById('p')
+            var res = window.document.querySelector('div#res')
+            var local = país.value
+            res.innerHTML = `Nasci no país ${local}.`
+            if(local === "Brasil"){
+                res.innerHTML += '<strong>Sou Brasileiro.</strong>'
+            }
+            else{
+                res.innerHTML +='<strong>Sou estrangeiro.</strong>'
+            }
+        }
+    </script>
+</body>
+</html>
